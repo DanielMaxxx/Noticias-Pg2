@@ -24,6 +24,11 @@ function App() {
             <span className="icon">🔔</span>
             <p>Notícias</p>
           </div>
+          <div className="menu-item">
+            <span className="icon">🚨</span>
+            <p>Ocorrencias</p>
+          </div>
+          
         </div>
       </div>
       <div className="content">
