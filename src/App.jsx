@@ -6,13 +6,11 @@ function App() {
     <div className="container">
       <div className="sidebar">
         <div className="user-info">
-          
           <img 
-            src=""
+            src="WhatsApp Image 2024-09-04 at 19.27.47.jpeg"
             alt="User"
             className="user-avatar"
           />
-
           <p>Daniel Maximiniano</p>
         </div>
         <div className="menu">
@@ -28,13 +26,14 @@ function App() {
             <span className="icon">🚨</span>
             <p>Ocorrencias</p>
           </div>
-          
         </div>
       </div>
+      
       <div className="content">
         <header className="header">
           <h1 id='Adm'>Adm Notícias</h1>
         </header>
+        
         <div className="main-content">
           <div className="news-list">
             {Array(7).fill(null).map((_, index) => (
@@ -54,6 +53,7 @@ function App() {
               </div>
             ))}
           </div>
+
           <div className="news-form">
             <h2>Nova Notícia</h2>
             <input type="text" placeholder="Título" />

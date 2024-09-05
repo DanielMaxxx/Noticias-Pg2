@@ -18,11 +18,13 @@ body, html {
 
 .sidebar {
   width: 20%;
-  background-color: #f0f0f0;
+  background-color: #ccc;
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 
 .user-info {
@@ -30,8 +32,11 @@ body, html {
 }
 
 .user-avatar {
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   margin-bottom: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
 
 .menu {
@@ -43,19 +48,36 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.menu-item.active, .menu-item:hover {
+  padding: 15px 20px;
   background-color: #007bff;
   color: white;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 18px;
 }
 
-.icon {
+.menu-item i {
   margin-right: 10px;
 }
+
+.menu-item:hover {
+  background-color: #0056b3;
+}
+
+.menu-item.active {
+  background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
 
 .content {
   width: 80%;
@@ -70,6 +92,7 @@ body, html {
   padding: 20px;
   text-align: center;
   font-size: 1.5rem;
+  border-top-right-radius: 20px;
 }
 
 .main-content {
@@ -88,17 +111,21 @@ body, html {
   justify-content: space-between;
   align-items: center;
   padding: 15px;
-  border-bottom: 1px solid #ddd;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  background-color: #e6e6e6;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.news-item:last-child {
-  border-bottom: none;
+.news-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 .date {
   background-color: #e6e6e6;
   padding: 10px;
-  border-radius: 4px;
+  border-radius: 15px;
   text-align: center;
   min-width: 60px;
 }
@@ -131,19 +158,28 @@ body, html {
   border: none;
   color: white;
   padding: 10px 15px;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .delete-btn {
   background-color: #ff4d4d;
 }
 
+.edit-btn:hover, .delete-btn:hover {
+  background-color: #0056b3;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
 .news-form {
   width: 300px;
   background-color: #007bff;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 20px;
   color: white;
   display: flex;
   flex-direction: column;
@@ -153,7 +189,7 @@ body, html {
   margin-bottom: 15px;
   padding: 10px;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .save-btn {
@@ -161,8 +197,13 @@ body, html {
   color: white;
   border: none;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.save-btn:hover {
+  background-color: #23272b;
 }
 
 @media (max-width: 768px) {
@@ -188,7 +229,4 @@ body, html {
     width: 100%;
     margin-top: 20px;
   }
-}
-#id {
-  margin-right: 50%;
 }
